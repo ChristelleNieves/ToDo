@@ -3,7 +3,7 @@ A To-Do list application for iOS.
 
 ## Tech/Frameworks Used
 - Swift
-- UIKit
+- UIKit (100% Programmatic UI)
 - CoreData
 
 ## Features
@@ -13,6 +13,7 @@ A To-Do list application for iOS.
 - Remove tasks
 - Mark tasks as completed
 - View date and time task was created
+- Haptic feedback
 
 ## Dark Mode Screenshots
 ![92d539f2edb2ea545bee3e56131f2953](https://user-images.githubusercontent.com/29238419/135707679-45694e19-9965-4a6c-9dfa-4f08996f0143.png)
