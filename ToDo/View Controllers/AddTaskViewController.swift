@@ -69,7 +69,7 @@ extension AddTaskViewController {
         textField.delegate = self
         textField.attributedPlaceholder = NSAttributedString(string: "Type here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         textField.textColor = UIColor.black
-        textField.backgroundColor = UIColor.white.withAlphaComponent(0.80)
+        textField.backgroundColor = UIColor.white
         textField.layer.cornerRadius = 20
         
         // Add a leftView to the textField for padding
