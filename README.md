@@ -9,8 +9,8 @@ A To-Do list application for iOS.
 ## Features
 - Supports dark mode and light mode
 - Add new tasks
-- Edit existing tasks
-- Remove tasks
+- Edit existing tasks by swiping right
+- Remove tasks by swiping left
 - Mark tasks as completed
 - View date and time task was created
 - Haptic feedback
