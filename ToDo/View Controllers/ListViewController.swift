@@ -43,7 +43,6 @@ extension ListViewController {
         
         // Appearance
         tableView.backgroundColor = UIColor.clear
-        tableView.rowHeight = 85
         tableView.separatorStyle = .none
         
         // Constraints

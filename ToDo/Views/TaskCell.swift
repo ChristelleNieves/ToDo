@@ -113,9 +113,10 @@ extension TaskCell {
         taskLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            taskLabel.centerYAnchor.constraint(equalTo: roundedView.centerYAnchor),
+            taskLabel.topAnchor.constraint(equalTo: roundedView.topAnchor, constant: 17),
             taskLabel.leadingAnchor.constraint(equalTo: checkMarkCircleButton.trailingAnchor, constant: 5),
-            taskLabel.trailingAnchor.constraint(equalTo: roundedView.trailingAnchor, constant: -5)
+            taskLabel.trailingAnchor.constraint(equalTo: roundedView.trailingAnchor, constant: -10),
+            taskLabel.bottomAnchor.constraint(equalTo: roundedView.bottomAnchor, constant: -17)
         ])
     }
 }
