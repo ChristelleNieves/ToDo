@@ -124,6 +124,8 @@ extension AddTaskViewController {
                 break
             }
             
+            self.dismiss(animated: true, completion: nil)
+            
         }, for: .touchUpInside)
         
         // Constraints
