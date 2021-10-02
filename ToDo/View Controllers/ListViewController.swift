@@ -254,7 +254,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         // Configure subtitle label
         let numIncompleteTasks = listViewModel.getNumberOfIncompleteTasks()
         
-        subtitleLabel.text = numIncompleteTasks == 0 ? "You've completed all your tasks! 🎉" : "You have \(numIncompleteTasks) tasks to complete"
+        // If the number of tasks left is 1 we want to display the singular word "task", otherwise it will be plural "tasks"
+        let taskPluralOrSingular = numIncompleteTasks == 1 ? "task" : "tasks"
+        
+        subtitleLabel.text = numIncompleteTasks == 0 ? "You've completed all your tasks! 🎉" : "You have \(numIncompleteTasks) \(taskPluralOrSingular) to complete"
         subtitleLabel.textColor = UIColor(named: "AppAccent")
         subtitleLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         headerView.addSubview(subtitleLabel)
