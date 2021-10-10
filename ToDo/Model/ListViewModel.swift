@@ -9,7 +9,6 @@ import Foundation
 import CoreData
 
 public class ListViewModel {
-    let dataService = DataService()
     var tasks = [NSManagedObject]()
     var taskCellViewModels = [TaskCellViewModel]()
     

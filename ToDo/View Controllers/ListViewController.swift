@@ -147,7 +147,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { _ in
                 
                 // Remove the task from the viewModel array
-                self.listViewModel.dataService.removeTask(task: self.listViewModel.tasks[indexPath.row])
+                dataService.removeTask(task: self.listViewModel.tasks[indexPath.row])
                 self.listViewModel.getAllTasks()
                 
                 // Remove the cell from the tableView
@@ -275,25 +275,29 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableView.frame.height * 1/6
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height * 1/9.7
+    }
 }
 
 // MARK: - TaskDelegate
 
 extension ListViewController: TaskDelegate {
     func saveNewTask(description: String, date: Date, isCompleted: Bool) {
-        listViewModel.dataService.addTask(description: description, date: date, isCompleted: isCompleted)
+        dataService.addTask(description: description, date: date, isCompleted: isCompleted)
         listViewModel.getAllTasks()
         tableView.reloadData()
     }
     
     func toggleCompletion(task: NSManagedObject) {
-        listViewModel.dataService.toggleTaskCompletion(task: task)
+        dataService.toggleTaskCompletion(task: task)
         listViewModel.getAllTasks()
         tableView.reloadData()
     }
     
     func updateTask(newDescription: String) {
-        listViewModel.dataService.updateTaskDescription(task: listViewModel.tasks[editIndexPath!.row], newDescription: newDescription)
+        dataService.updateTaskDescription(task: listViewModel.tasks[editIndexPath!.row], newDescription: newDescription)
         listViewModel.getAllTasks()
         tableView.reloadData()
     }
